@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: b-r !important; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+#hero {
+  background-image: url(../img/hero.png);
+  height: 100vh;
+  width: 100%; }
+  #hero .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center; }
+    #hero .container .row .col-lg-6 .hero-text {
+      margin-top: 7.5rem; }
+    #hero .container .row .col-lg-6 p {
+      font-size: 18px;
+      color: #3d2514; }
+      #hero .container .row .col-lg-6 p span {
+        letter-spacing: .5px;
+        padding: .3rem .5rem;
+        border: 1px dashed #3d2514; }
+    #hero .container .row .col-lg-6 h1 {
+      letter-spacing: 5px;
+      text-shadow: 3.5px 4px #fff;
+      font-family: alfa;
+      text-transform: uppercase;
+      color: #3d2514;
+      font-size: 6.5rem; }
+    #hero .container .row .col-lg-6 h3 {
+      letter-spacing: 5px;
+      text-shadow: 3.5px 4px #fff;
+      color: #3d2514;
+      font-family: alfa;
+      text-transform: uppercase;
+      font-size: 4rem; }
+    #hero .container .row .col-lg-6 img {
+      width: 100%; }
+
+@font-face {
+  font-family: alfa;
+  src: url(../font@face/Alfa_Slab_One/alfa.ttf); }
+
+@font-face {
+  font-family: b-r;
+  src: url(../font@face/Bebas_Neue/BebasNeueRegular-gxj83.ttf); }
+
+@font-face {
+  font-family: b-m;
+  src: url(../font@face/Bebas_Neue/BebasNeueMediuam-d9A1l.ttf); }
+
+@font-face {
+  font-family: b-b;
+  src: url(../font@face/Bebas_Neue/BebasNeueBold-7B9LE.ttf); }
+
+@font-face {
+  font-family: m-r;
+  src: url(../font@face/Montserrat/Montserrat-Regular.ttf); }
+
+@font-face {
+  font-family: m-m;
+  src: url(../font@face/Montserrat/Montserrat-Medium.ttf); }
+
+@font-face {
+  font-family: m-sb;
+  src: url(../font@face/Montserrat/Montserrat-SemiBold.ttf); }
+
+@font-face {
+  font-family: m-b;
+  src: url(../font@face/Montserrat/Montserrat-Bold.ttf); }
+
+@font-face {
+  font-family: m-xb;
+  src: url(../font@face/Montserrat/Montserrat-ExtraBold.ttf); }
+
+@font-face {
+  font-family: m-black;
+  src: url(../font@face/Montserrat/Montserrat-Black.ttf); }
