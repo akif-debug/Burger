@@ -1,14 +1,137 @@
 // hero
 #hero {
+	padding: 7rem 0;
 	background-image: url(../img/hero.png);
-	height: 100vh;
+	height: 100%;
 	width: 100%;
-	.container {
-		width: 100%;
-		height: 100vh;
-		display: flex;
+	// nav
+	// nav
+	nav {
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	position: absolute;
+	padding: 0 9%;
+	height: 125px;
+	text-align: right;
+	align-items: center;
+	transition: all .5s;
+	justify-content: space-between;
+	background: transparent !important;
+	// background: rgba($color: #fff, $alpha: 1);
+	@include respond(phone) {
+		padding: 0 1%;
+		height: 90px;
+	}
+	@include respond(desktop) {
+		padding: 0 2%;
+	}
+	// @include respond(tablet-land) {
+		// padding: 0 2%;
+	// }
+	.right {
+		img {
+			// width: 80%;
+		}
+	}	
+	.left {
+		// text-align: right !important;
+		font-family: b-b;
+		@include respond(tablet-land) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 105px;
+			right: -103%;
+			z-index: 0;
+			text-align: center;
+			transition: all .5s;
+			// box-shadow: 0px 0px 5px 10px rgba(0,0,0,0.75);
+			// background: rgba($color: #fff, $alpha: 1);
+			background-image: url(../img/hero.png);
+			-webkit-box-shadow: 0px 0px 20px 1px rgba(150,75,0,1);
+			-moz-box-shadow: 0px 0px 20px 1px rgba(150,75,0,1);
+			box-shadow: 0px 0px 20px 1px rgba(150,75,0,1);
+		}
+		a {
+			line-height: 40px !important;
+			letter-spacing: 3px;
+			transition: .3s;
+			font-size: 16px;
+			padding: 1rem 0;
+			color: $primary-color;
+			white-space: nowrap;
+			text-transform: capitalize;
+			@include respond(tablet-land) {
+				display: block;
+				font-size: 18px;
+				line-height: 80px;
+				width: 100%;
+				text-transform: uppercase;
+				margin: 0;
+				border-bottom: 2px solid $primary-color;
+			}
+			&:hover {
+				color: $primary-color;
+			}
+			img {
+				width: 5%;
+				transform: rotateY(180deg);
+			}
+		&:nth-child(1) {
+			color: $primary-color;
+			@include respond(tablet-land) {
+				background-image: linear-gradient(to right, rgba(0,0,0, 1), rgba(65, 84, 241, 1)) !important;
+				-webkit-background-clip: text !important;
+				color: transparent !important;
+			}
+		}
+		&:not(:last-child) {
+			margin-right: 2rem;
+			}
+		}
+	}
+	#check {
+		display: none;
+	}
+	i {
+		color: $primary-color;
+		font-size: 2rem;
+		@media (min-width: 992px){
+			display: none;
+		}
+	}
+}
+#check:checked ~ .left {
+	right: -55%;
+	text-align: left !important;
+	@include respond(phone) {
+		right: 0%;
+	}
+	@include respond(tablet-por) {
+		right: -40%;
+	}
+}
+#check:checked ~ .left a {
+	padding: 1rem .5rem;
+}
+#check:checked ~ .left br {
+	display: none;
+}
+	// nav-end
+	// nav-end
+
+	.container-hero {
+		width: 100% !important;
+		height: 100% !important;
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
 		align-items: center;
+		// border: 15px solid black !important;
 		.row {
+		// border: 2px solid black;
 			.col-lg-6 {
 				.hero-text {
 					margin-top: 7.5rem;
@@ -16,6 +139,9 @@
 				p {
 					font-size: 18px;
 					color: $primary-color;
+					@include respond(phone) {
+						font-size: 16px !important;
+					}
 					span {
 						letter-spacing: .5px;
 						padding: .3rem .5rem;						
@@ -25,15 +151,13 @@
 				h1 {
 					letter-spacing: 5px;
 					text-shadow: 3.5px 4px $white-color;
-					// box-shadow: 0px -10px 0px 0px rgba(255,255,255,1);
-					// text-shadow: 0px -10px 0px 0px rgba(255,255,255,1) !important;
-					// -webkit-text-shadow: 12px 0px 0px 0px rgba(255,255,255,1);
-					// -moz-text-shadow: 12px 0px 0px 0px rgba(255,255,255,1);
-					// text-shadow: 12px 0px 0px 0px rgba(255,255,255,1);
 					font-family: alfa;
 					text-transform: uppercase;
 					color: $primary-color;
 					font-size: 6.5rem;
+					@include respond(phone) {
+						font-size: 4rem !important;
+					}
 				}
 				h3 {
 					letter-spacing: 5px;
@@ -43,6 +167,9 @@
 					font-family: alfa;
 					text-transform: uppercase;
 					font-size: 4rem;
+					@include respond(phone) {
+						font-size: 3rem !important;
+					}
 				}
 				img {
 					width: 100%;
@@ -51,3 +178,4 @@
 		}
 	}
 }
+
