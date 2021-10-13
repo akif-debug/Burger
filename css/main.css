@@ -25,6 +25,9 @@ a {
   background-image: url(../img/hero.png);
   height: 100%;
   width: 100%; }
+  @media (max-width: 500px) {
+    #hero {
+      padding: 1rem 0 !important; } }
   #hero nav {
     top: 0;
     z-index: 2;

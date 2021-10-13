@@ -4,6 +4,9 @@
 	background-image: url(../img/hero.png);
 	height: 100%;
 	width: 100%;
+	@include respond(phone) {
+		padding: 1rem 0 !important;
+	}
 	// nav
 	// nav
 	nav {
