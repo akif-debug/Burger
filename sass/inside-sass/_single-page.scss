@@ -7,6 +7,12 @@
 	@include respond(phone) {
 		padding: 1rem 0 !important;
 	}
+	@include respond(tablet-por) {
+		padding: 2rem 0 !important;
+	}
+	@include respond(tablet-land) {
+		padding: 2rem 0 !important;
+	}
 	// nav
 	// nav
 	nav {
@@ -101,6 +107,7 @@
 	i {
 		color: $primary-color;
 		font-size: 2rem;
+		// margin-top: 21rem !important;
 		@media (min-width: 992px){
 			display: none;
 		}

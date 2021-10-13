@@ -28,6 +28,12 @@ a {
   @media (max-width: 500px) {
     #hero {
       padding: 1rem 0 !important; } }
+  @media (max-width: 770px) and (min-width: 500px) {
+    #hero {
+      padding: 2rem 0 !important; } }
+  @media (max-width: 991px) {
+    #hero {
+      padding: 2rem 0 !important; } }
   #hero nav {
     top: 0;
     z-index: 2;
