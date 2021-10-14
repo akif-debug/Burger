@@ -165,6 +165,9 @@
 					@include respond(phone) {
 						font-size: 4rem !important;
 					}
+					@include respond(tablet-por) {
+						font-size: 6.5rem !important;
+					}
 				}
 				h3 {
 					letter-spacing: 5px;
@@ -196,11 +199,18 @@
 	.container {
 		.row {
 			.col-lg-6 {
+				@include respond(tablet-por) {
+					margin-bottom: 2.255rem !important;
+				}
+				@include respond(tablet-land) {
+					margin-bottom: 2.255rem !important;
+				}
 				img {
+					width: 100%;
 					border-radius: 10px;
 				}
 				.givemargin {
-					margin-bottom: 1.8rem !important;
+					margin-bottom: 2.255rem !important;
 				}
 			}
 		}
@@ -214,6 +224,9 @@
 //-------------tasty-burger---------------------------------------------
 //-------------tasty-burger---------------------------------------------
 #tasty-burger {
+	@include respond(phone) {
+		// display: none !important;
+	}
 	.container {
 		.section-para {
 			color: $lite-black;
@@ -221,6 +234,12 @@
 			font-family: m-r;
 			padding: 0 8rem !important;
 			line-height: 24px;
+			@include respond(phone) {
+				padding: 0 2% !important;
+			}
+			@include respond(tablet-por) {
+				padding: 0 2.5% !important;
+			}
 		}
 		.row {	
 			margin-top: 4.5rem !important;
@@ -228,15 +247,30 @@
 				&:hover img {
 					transform: scale(1.0);
 				}
+				@include respond(phone) {
+					margin-bottom: 5rem;
+				}
+				@include respond(tablet-por) {
+					margin-bottom: 5rem;
+				}
+				.tasty-content {
+					@include respond(phone) {
+						padding-top: 1rem !important;
+					}
+				}
 				h1 {
 					font-family: b-b;
 					font-size: 2.2rem;
 					color: $primary-color;
 				}
 				img {
+					width: 100% !important;
 					cursor: pointer;
 					transition: all .3s ease-in-out;
 					transform: scale(1.1);
+					@include respond(phone) {
+						transform: scale(1.0);	
+					}
 				}
 				p {
 					color: $lite-black;
@@ -245,6 +279,9 @@
 					padding: 0 2rem;
 					margin-bottom: 2.5rem;
 					letter-spacing: -.5px;
+					@include respond(phone) {
+						padding: 0 0 !important;
+					} 
 				}
 				a {
 					text-wrap: nowrap; 
@@ -273,16 +310,24 @@
 //--------------discover--------------------------------------------
 #discover {
 	margin-top: 10rem !important;
+	@include respond(phone) {
+		margin-top: 2rem !important;
+	}
 	.container {
 		// box-shadow: 10px 10px 5px -7px rgba(153,153,153,1); 
 		// box-shadow: 10px 20px 25px -2px rgba(214,214,214,1);
 		// box-shadow: 10px 20px 25px -10px rgba(232,232,232,1);
 		box-shadow: 10px 20px 25px -2px rgba(215,215,215,1);
 		text-align: left;
+		@include respond(phone) {
+			box-shadow: 10px 20px 25px 10px rgba(215,215,215,1);
+		}
 		.row {
 			.col-lg-6 {
 				// border: 1px solid red;
-
+				@include respond(phone) {
+					padding: 14px !important;
+				}
 				img {
 					width: 100% !important;
 				}
@@ -315,20 +360,29 @@
 #reservation {
 	margin-top: 10rem !important;				
 	position: relative;
+	@include respond(phone) {
+		margin-top: 6.5rem !important;
+	}
 	.container {
 		.left-side-img {
 			position: absolute;
 			top: -30%;
 			// bottom: -20%;
 			right: 87.2%;
+			@include respond(phone) {
+				display: none !important;
+			}
 			@include respond(tablet-land) {
-				display: none;	
+				display: none !important;	
 			}
 		}
 		.right-side-img {
 			position: absolute;
 			// top: 100%;
 			left: 83.5%;
+			@include respond(phone) {
+				display: none !important;
+			}
 			@include respond(tablet-land) {
 				display: none;
 			}
@@ -338,6 +392,9 @@
 			right: 75%;
 			top: 15%;
 			transform: rotate(15deg);
+			@include respond(phone) {
+				display: none !important;
+			}
 			@include respond(tablet-land) {
 				display: none;
 			}
@@ -377,7 +434,7 @@
 			}
 			button {
 				border-radius: 4px;
-				// font-size: 1.1rem;
+				font-size: 16px;
 				letter-spacing: .6px;
 				font-family: alfa;
 				color: $white-color;
@@ -385,7 +442,7 @@
 				border: none;
 				outline: none;
 				text-transform: uppercase;
-				padding: .8rem 0;
+				padding: .7rem 0;
 				width: 36% !important;
 				transition: $transition;
 				&:hover {
@@ -410,14 +467,31 @@
 	position: relative;
 	margin-top: 10.5rem !important;
 	margin-bottom: 2rem;
+	text-align: right !important;					
+	@include respond(phone) {
+		margin-top: 5rem !important;
+		margin-bottom: 0rem !important;
+	}
 	.container {
-	width: 100% !important;
-	background-repeat: no-repeat;
-	background-image: url(../img/footer-bg.png);
+		width: 100% !important;
+		background-repeat: no-repeat;
+		background-image: url(../img/footer-bg.png);
 		.row {
 			.col-lg-7 {
 				padding: 5rem 2rem;
 				text-align: left;
+				@include respond(phone) {
+					padding: 1rem 1rem !important;
+				}
+				@include respond(tablet-por) {
+					padding: 1rem 1rem !important;
+				}
+				@include respond(tablet-land) {
+					padding: 1rem 1rem !important;
+				}
+				.footer-logo {
+					width: 100% !important;
+				}
 				p {
 					padding-top: 2rem;
 					line-height: 28px;
@@ -425,12 +499,32 @@
 					font-family: m-r;
 					font-size: 14px;
 					padding-right: 12rem;
+					@include respond(phone) {
+						display: none;
+					}
+					@include respond(tablet-por) {
+						display: none;
+					}
+					@include respond(tablet-land) {
+						display: none;
+					}
 				}
 				h6 {
 					letter-spacing: .5px;
 					color: $white-color;
 					position: absolute;
 					top: 85%;
+				}
+				.branding {
+					@include respond(phone) {
+						display: none;
+					}
+					@include respond(tablet-por) {
+						display: none;
+					}
+					@include respond(tablet-land) {
+						display: none;
+					}
 				}
 			}
 			.col-lg-5 {
@@ -440,6 +534,15 @@
 					right: 16%;
 					font-size: 24px !important;
 					color: $white-color;
+					@include respond(phone) {
+						display: none;
+					}
+					@include respond(tablet-por) {
+						display: none;
+					}
+					@include respond(tablet-land) {
+						display: none;
+					}
 				}
 				h2 {
 					position: absolute;
@@ -447,6 +550,15 @@
 					right: 20.4% !important;
 					font-size: 24px !important;
 					color: $white-color;
+					@include respond(phone) {
+						display: none;
+					}
+					@include respond(tablet-por) {
+						display: none;
+					}
+					@include respond(tablet-land) {
+						display: none;
+					}
 				}
 				img {
 					position: absolute;
@@ -454,6 +566,15 @@
 					right: 12%;
 					font-size: 24px !important;
 					color: $white-color;
+					@include respond(phone) {
+						display: none;
+					}
+					@include respond(tablet-por) {
+						display: none;
+					}
+					@include respond(tablet-land) {
+						display: none;
+					}
 				}
 			}
 		}
