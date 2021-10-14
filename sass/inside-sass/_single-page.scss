@@ -313,7 +313,7 @@
 //--------------reservation-------------------------------
 //--------------reservation-------------------------------
 #reservation {
-	margin-top: 10rem !important;
+	margin-top: 10rem !important;				
 	position: relative;
 	.container {
 		.left-side-img {
@@ -321,28 +321,42 @@
 			top: -30%;
 			// bottom: -20%;
 			right: 87.2%;
+			@include respond(tablet-land) {
+				display: none;	
+			}
 		}
 		.right-side-img {
 			position: absolute;
 			// top: 100%;
 			left: 83.5%;
+			@include respond(tablet-land) {
+				display: none;
+			}
 		}
 		.center-img {
 			position: absolute;
 			right: 75%;
 			top: 15%;
 			transform: rotate(15deg);
+			@include respond(tablet-land) {
+				display: none;
+			}
 		}
 		.row {
 			margin-top: 4rem !important;
 			margin: 0 14rem;
+			@include respond(tablet-land) {
+				margin: 0 0 !important;
+			}
 		}
 		::placeholder {
 			color: $primary-color;
 			letter-spacing: .5px;
 		}
 		.col-lg-12 {
-			display: block;
+			@include respond(tablet-land) {
+				margin-top: 1rem;
+			}
 			input {
 				margin-bottom: 1.6rem;
 				padding: .8rem 0;
@@ -350,6 +364,16 @@
 				border-radius: 4px;
 				border: 1px solid $gray-color;
 				width: 36% !important;
+				@include respond(tablet-land) {
+					width: 45% !important;
+					// margin-left: 0 !important;
+					// margin-right: 0 !important;
+				}
+				&:focus,
+				&:active {
+					outline: 1px solid $yellow-color;
+					border: 1px solid $yellow-color;
+				}
 			}
 			button {
 				border-radius: 4px;
@@ -367,6 +391,9 @@
 				&:hover {
 					background: $after-hover;
 				}
+				@include respond(tablet-land) {
+					width: 45% !important;
+				}
 			}
 		}
 	}
@@ -382,9 +409,9 @@
 #footer {
 	position: relative;
 	margin-top: 10.5rem !important;
+	margin-bottom: 2rem;
 	.container {
 	width: 100% !important;
-	height: 60vh !important;
 	background-repeat: no-repeat;
 	background-image: url(../img/footer-bg.png);
 		.row {
@@ -409,15 +436,15 @@
 			.col-lg-5 {
 				h1 {
 					position: absolute;
-					top: 42.5%;
+					top: 57.8%;
 					right: 16%;
 					font-size: 24px !important;
 					color: $white-color;
 				}
 				h2 {
 					position: absolute;
-					top: 50.5%;
-					right: 20.4%;
+					top: 68.3% !important;
+					right: 20.4% !important;
 					font-size: 24px !important;
 					color: $white-color;
 				}
@@ -432,7 +459,6 @@
 		}
 	}
 }
-//--------------end---------------------------------------
 //--------------end---------------------------------------
 //--------------end---------------------------------------
 //--------------end---------------------------------------
